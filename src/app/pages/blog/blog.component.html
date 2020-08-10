@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <div class="card-deck">
+    <div class="card" *ngFor="let post of postsArray">
+      <img class="card-img-top" [src]="post.image">
+      <div class="card-body">
+        <h5 class="card-title">{{ post.title }}</h5>
+        <h3>{{ post.author }}</h3>
+        <p class="card-text">{{ post.text }}</p>
+        <p class="card-text"><small class="text-muted">{{ post.date | date: dateFormat }}</small></p>
+      </div>
+    </div>
+  </div>
+</div>

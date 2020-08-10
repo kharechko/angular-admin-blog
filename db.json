@@ -1,0 +1,20 @@
+{
+  "blogs": [
+    {
+      "id": 2,
+      "title": "Jellyfish",
+      "text": "Jellyfish and sea jellies are the informal common names given to the medusa-phase of certain gelatinous members of the subphylum Medusozoa, a major part of the phylum Cnidaria. Jellyfish are mainly free-swimming marine animals with umbrella-shaped bells and trailing tentacles, although a few are not mobile, being anchored to the seabed by stalks. The bell can pulsate to provide propulsion and highly efficient locomotion. The tentacles are armed with stinging cells and may be used to capture prey and defend against predators. Jellyfish have a complex life cycle; the medusa is normally the sexual phase, the planula larva can disperse widely and is followed by a sedentary polyp phase.",
+      "date": "2020-08-10T15:37:27.279Z",
+      "author": "Christie",
+      "image": "https://images.unsplash.com/photo-1596930485209-ddbc0508c0b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": 3,
+      "title": "How to deal with stress?",
+      "text": "It's important to keep that in mind. You need to make sure that you're only choosing a medicine as a last resort because of these risks, and even if you do choose a stress medicine and feel better, make sure that you're still learning proper coping strategies so that your anxiety doesn't come back when you stop taking the medicine.",
+      "date": "2020-08-10T15:40:59.705Z",
+      "author": "JohnM",
+      "image": "https://images.unsplash.com/photo-1596571317746-ca2002eb3d81?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+    }
+  ]
+}

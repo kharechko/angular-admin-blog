@@ -1,0 +1,77 @@
+
+<div class="container">
+    <form>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="title here" [(ngModel)]="postTitle" name="postTitle">
+        </div>
+        <div class="form-group">
+            <textarea name="" class="form-control" placeholder="text here..." [(ngModel)]="postText" name="postText"></textarea>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="author here.." [(ngModel)]="postAuthor" name="postAuthor">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="image url here.." [(ngModel)]="postImage" name="postImage">
+      </div>
+        <button mat-raised-button (click)="addPost()" class="borderless">add</button>
+    </form>
+</div>
+
+
+<div class="container-fluid my-5">
+    <mat-table [dataSource]="postsArray" class="mat-elevation-z8">
+   
+        <ng-container matColumnDef="number">
+          <mat-header-cell *matHeaderCellDef>  # </mat-header-cell>
+          <mat-cell *matCellDef="let post; let i = index">{{ i + 1 }}</mat-cell>
+        </ng-container>
+      
+     
+        <ng-container matColumnDef="title">
+          <mat-header-cell *matHeaderCellDef> Title</mat-header-cell>
+          <mat-cell *matCellDef="let post"> {{post.title}} </mat-cell>
+        </ng-container>
+      
+     
+        <ng-container matColumnDef="text">
+          <mat-header-cell *matHeaderCellDef> Text </mat-header-cell>
+          <mat-cell *matCellDef="let post"> {{post.text}} </mat-cell>
+        </ng-container>
+      
+    
+        <ng-container matColumnDef="date">
+          <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
+          <mat-cell *matCellDef="let post"> {{post.date | date: dateFormat}}  </mat-cell>
+        </ng-container>
+    
+    
+    
+          <ng-container matColumnDef="author">
+            <mat-header-cell *matHeaderCellDef> Author </mat-header-cell>
+            <mat-cell *matCellDef="let post">{{ post.author }} </mat-cell>
+          </ng-container>
+       
+    
+          <ng-container matColumnDef="edit">
+            <mat-header-cell *matHeaderCellDef> Edit</mat-header-cell>
+            <mat-cell *matCellDef="let post">
+                <button mat-icon-button  class="borderless" (click)="editPost(post)"> 
+                    <mat-icon>edit</mat-icon>
+                  </button>
+            </mat-cell>
+          </ng-container>
+        
+       
+          <ng-container matColumnDef="delete">
+            <mat-header-cell *matHeaderCellDef> Delete </mat-header-cell>
+            <mat-cell *matCellDef="let post">
+                <button mat-icon-button class="borderless" (click)="deletePost(post)">
+                    <mat-icon>delete</mat-icon>
+                  </button>
+            </mat-cell>
+          </ng-container>
+      
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+</div>

@@ -1,0 +1,28 @@
+mat-toolbar{
+    background-color: rgb(221, 146, 146);
+    height: 100px;
+    font-family: monospace;
+    font-size:  30px;
+}
+
+.spacer {
+    flex: 1 0;
+  }
+
+.nav-link{
+    color: black;
+}
+
+.nav-link:active{
+    color: white;
+}
+.nav-link.active{
+    background-color: rgb(191, 231, 229);
+}
+button{
+    background-color: transparent;
+    border-radius: none;
+    outline: none;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
