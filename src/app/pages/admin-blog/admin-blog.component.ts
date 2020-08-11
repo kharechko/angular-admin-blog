@@ -42,7 +42,7 @@ addPost(): void{
   const post: IPost = new Post(1, this.postTitle, this.postText, new Date(), this.postAuthor, this.postImage);
   if(!this.isEdited) {
     if(this.postTitle && this.postText && this.postText &&  this.postImage) {
-      if(this.postsArray.length >= 1){
+      if(this.postsArray.length > 0){
         post.id = this.postsArray.slice(-1)[0].id + 1;
       }
       this.blogsService.addPost(post).subscribe( () => {
